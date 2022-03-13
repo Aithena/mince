@@ -256,3 +256,19 @@ function mouseMenu (isEnable) {
   }
 }
 
+/**
+ * 首页风格
+ */
+ ;(function () {
+  if (!$('#homePage').length) return false
+  var homePage = new Swiper('#homePage .swiper-container', {
+    direction: 'vertical',
+    slidesPerView: 1,
+    spaceBetween: 30,
+    mousewheel: true,
+    pagination: {
+      el: '#homePage .swiper-pagination',
+      clickable: true
+    }
+  })
+})(window, jQuery)
