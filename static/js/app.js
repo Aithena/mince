@@ -261,14 +261,37 @@ function mouseMenu (isEnable) {
  */
  ;(function () {
   if (!$('#homePage').length) return false
-  var homePage = new Swiper('#homePage .swiper-container', {
+  var homePage = new Swiper('#homePage', {
     direction: 'vertical',
     slidesPerView: 1,
     spaceBetween: 30,
     mousewheel: true,
     pagination: {
-      el: '#homePage .swiper-pagination',
+      el: '',
       clickable: true
     }
+  })
+
+  var teamSwiper = new Swiper("#teamSwiper", {
+    slidesPerView: 3,
+    spaceBetween: 50,
+    pagination: {
+      el: "#teamDots",
+      clickable: true
+    }
+  });
+
+  var huayingSwiper = new Swiper("#huayingSwiper", {
+    slidesPerView: 4,
+    spaceBetween: 50,
+    pagination: {
+      el: "#teamDots",
+      clickable: true
+    }
+  });
+
+  $('#homeInfo .tabed').on('mouseenter', 'dd',  function () {
+    $(this).addClass('is-active').siblings().removeClass('is-active')
+    $('#homeInfo .switch dd').eq($(this).index()).addClass('is-active').siblings().removeClass('is-active')
   })
 })(window, jQuery)
