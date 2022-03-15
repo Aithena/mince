@@ -34,6 +34,7 @@ body {
   right: 0;
   top: 0;
   z-index: 100;
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 .header .logo {
   float: left;
@@ -127,12 +128,25 @@ body {
 .header .nav .item.is-active .link {
   color: #FF461F;
 }
+.header .nav .item.is-active .link span {
+  display: block;
+}
+.header .nav .item.is-active .link span:first-child {
+  display: none;
+}
 .header .nav .link {
   display: block;
   height: 50px;
   line-height: 50px;
   padding: 0 20px;
   color: #666666;
+  transition: all 0.3s ease;
+}
+.header .nav .link span {
+  display: none;
+}
+.header .nav .link span:first-child {
+  display: block;
 }
 .header .nav .link:hover {
   color: #FF461F;

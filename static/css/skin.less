@@ -50,6 +50,7 @@ body {
   right: 0;
   top: 0;
   z-index: 100;
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0));
   .logo {
     float: left;
     margin: 36px;
@@ -144,6 +145,12 @@ body {
       &.is-active {
         .link {
           color: @primary;
+          span {
+            display: block;
+            &:first-child {
+              display: none;
+            }
+          }
         }
       }
     }
@@ -153,6 +160,13 @@ body {
       line-height: 50px;
       padding: 0 20px;
       color: #666666;
+      transition: all .3s ease;
+      span {
+        display: none;
+        &:first-child {
+          display: block;
+        }
+      }
       &:hover {
         color: @primary;
       }

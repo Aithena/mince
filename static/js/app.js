@@ -261,7 +261,8 @@ function mouseMenu (isEnable) {
  */
  ;(function () {
   if (!$('#homePage').length) return false
-  var homePage = new Swiper('#homePage', {
+
+  var $homePage = new Swiper('#homePage', {
     direction: 'vertical',
     slidesPerView: 1,
     spaceBetween: 30,
@@ -269,10 +270,21 @@ function mouseMenu (isEnable) {
     pagination: {
       el: '',
       clickable: true
+    },
+    on: {
+      slideChangeTransitionEnd: function(){
+        $('#nav .item').eq(this.activeIndex).addClass('is-active').siblings().removeClass('is-active')
+      }
     }
   })
 
-  var teamSwiper = new Swiper("#teamSwiper", {
+  $('#nav').on('click', '.link', function() {
+    var index = $(this).parents('.item').index()
+    $(this).parents('.item').addClass('is-active').siblings().removeClass('is-active')
+    $homePage.slideTo(index, 1000, false)
+  })
+
+  var $teamSwiper = new Swiper("#teamSwiper", {
     slidesPerView: 3,
     spaceBetween: 50,
     pagination: {
@@ -281,7 +293,7 @@ function mouseMenu (isEnable) {
     }
   });
 
-  var huayingSwiper = new Swiper("#huayingSwiper", {
+  var $huayingSwiper = new Swiper("#huayingSwiper", {
     slidesPerView: 4,
     spaceBetween: 50,
     pagination: {
