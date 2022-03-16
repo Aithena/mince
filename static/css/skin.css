@@ -736,3 +736,73 @@ body {
   font-size: 16px;
   color: #666666;
 }
+/************************************************************
+ * 案例
+ ************************************************************/
+.case-list {
+  position: relative;
+  overflow: hidden;
+}
+.case-list .container {
+  margin: -10vw;
+}
+.case-list .container .list {
+  position: relative;
+  overflow: hidden;
+}
+.case-list .container .list .item {
+  float: left;
+  width: 20%;
+}
+.case-list .container .list .cell {
+  display: block;
+  margin: 0 30px;
+  position: relative;
+}
+.case-list .container .list .cell:hover .title,
+.case-list .container .list .cell:hover .mo {
+  visibility: visible;
+}
+.case-list .container .list .cell:hover .cover {
+  opacity: 1;
+}
+.case-list .container .list .cell .title {
+  text-align: center;
+  visibility: hidden;
+  line-height: 80px;
+}
+.case-list .container .list .cell .title h3 {
+  font-size: 20px;
+  font-weight: normal;
+  color: #ffffff;
+}
+.case-list .container .list .cell .cover {
+  position: relative;
+  padding: 0 0 100%;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+.case-list .container .list .cell .cover img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 4px solid transparent;
+  border-radius: 100px;
+}
+.case-list .container .list .cell .mo {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  visibility: hidden;
+}
+.case-list .container .list .cell .mo span {
+  display: block;
+  line-height: 40px;
+  padding: 0 20px;
+  background: #FF461F;
+  color: #ffffff;
+  border-radius: 25px;
+  font-size: 16px;
+}
