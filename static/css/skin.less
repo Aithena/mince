@@ -788,7 +788,7 @@ body {
             font-size: 25px;
             color: #ffffff;
             &::before {
-              content: counter(index) + '.';
+              content: counter(index) '.';
               color: @primary;
               margin: 0 5px 0 0;
             }
@@ -802,13 +802,34 @@ body {
           font-size: 16px;
           color: #666666;
         }
-
       }
     }
   }
 }
 
-
+.research-detail {
+  .container {
+    min-height: calc(100vh - 200px);
+    .profile {
+      position: relative;
+      margin: 0 0 50px;
+      text-align: center;
+      h1 {
+        line-height: 1.5;
+        font-size: 35px;
+        color: #ffffff;
+        font-weight: normal;
+      }
+    }
+    .content {
+      .rich {
+        line-height: 2;
+        font-size: 16px;
+        color: #666666;
+      }
+    }
+  }
+}
 
 
 

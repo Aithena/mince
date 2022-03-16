@@ -717,3 +717,22 @@ body {
   font-size: 16px;
   color: #666666;
 }
+.research-detail .container {
+  min-height: calc(100vh - 200px);
+}
+.research-detail .container .profile {
+  position: relative;
+  margin: 0 0 50px;
+  text-align: center;
+}
+.research-detail .container .profile h1 {
+  line-height: 1.5;
+  font-size: 35px;
+  color: #ffffff;
+  font-weight: normal;
+}
+.research-detail .container .content .rich {
+  line-height: 2;
+  font-size: 16px;
+  color: #666666;
+}
