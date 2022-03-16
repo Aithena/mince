@@ -1,29 +1,15 @@
-/**
+/******************************************************************
  * This is variable
- **/
-/**
+ *****************************************************************/
+/*******************************************************************
  * This is common
- **/
+ *******************************************************************/
 body {
   background-color: #1D1E1E;
 }
-.wrap {
+.wrapper {
   position: relative;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-.wrap:after {
-  content: '';
-  display: block;
-  clear: both;
-  width: 100%;
-  height: 0;
-  line-height: 0;
-  font-size: 0;
-}
-.rich {
-  line-height: 2;
-  text-align: justify;
+  padding: 200px 10vw 0;
 }
 .rich img {
   max-width: 100%;
@@ -151,9 +137,9 @@ body {
 .header .nav .link:hover {
   color: #FF461F;
 }
-/**
+/*****************************************************************************
  * This is homepage
- **/
+ ****************************************************************************/
 .home-page {
   position: relative;
 }
@@ -609,3 +595,84 @@ body {
   font-size: 24px;
   color: #FF461F;
 }
+/************************************************************
+ * 团队
+ ************************************************************/
+.team-detail .container {
+  background: #ffffff;
+  min-height: calc(100vh - 200px);
+  padding: 70px;
+  display: flex;
+}
+.team-detail .container .profile {
+  width: 300px;
+}
+.team-detail .container .profile .cover {
+  position: relative;
+  padding: 0 0 120%;
+  margin: 0 0 20px;
+}
+.team-detail .container .profile .cover img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.team-detail .container .profile .info {
+  position: relative;
+}
+.team-detail .container .profile .info p {
+  line-height: 30px;
+  font-size: 20px;
+  color: #000000;
+  margin: 0 0 10px;
+}
+.team-detail .container .profile .info p + p {
+  line-height: 24px;
+  font-size: 16px;
+  color: #999999;
+}
+.team-detail .container .profile .info .mo {
+  padding: 10px 0 0 0;
+  position: relative;
+}
+.team-detail .container .profile .info .mo a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: url(../img/icon-mo.png) 0 0 no-repeat;
+  transform: rotate(180deg);
+  overflow: hidden;
+  text-indent: -99em;
+}
+.team-detail .container .profile .info .mo a:hover {
+  opacity: 0.8;
+}
+.team-detail .container .content {
+  flex: 1;
+  margin: 0 0 0 70px;
+  padding: 50px;
+  border-radius: 30px;
+  background: #F5F8FA;
+}
+.team-detail .container .content .title {
+  position: relative;
+  margin: 0 0 20px;
+}
+.team-detail .container .content .title h2 {
+  line-height: 60px;
+  font-size: 40px;
+  color: #000000;
+  font-weight: normal;
+}
+.team-detail .container .content .rich {
+  line-height: 2;
+  font-size: 20px;
+  color: #000000;
+  text-align: justify;
+}
+/************************************************************
+ * 骅英调研
+ ************************************************************/
