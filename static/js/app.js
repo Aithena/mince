@@ -273,10 +273,22 @@ function mouseMenu (isEnable) {
     },
     on: {
       slideChangeTransitionEnd: function(){
-        $('#nav .item').eq(this.activeIndex).addClass('is-active').siblings().removeClass('is-active')
+        let index = this.activeIndex
+        $('#nav .item').eq(index).addClass('is-active').siblings().removeClass('is-active')
+        $('#homePage > .swiper-wrapper > .swiper-slide').eq(index).find('.ant').each(function (options) {
+          var $this = $(this);
+          options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+          $this.countTo(options);
+        });
       }
     }
   })
+
+  $('#homePage > .swiper-wrapper > .swiper-slide').eq(0).find('.ant').each(function (options) {
+    var $this = $(this);
+    options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+    $this.countTo(options);
+  });
 
   $('#nav').on('click', '.link', function() {
     var index = $(this).parents('.item').index()

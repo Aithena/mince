@@ -224,6 +224,10 @@ body {
     display: flex;
     .item {
       flex: 1;
+      &:hover {
+        transition: all .3s ease;
+        transform: translate(0, -10px);
+      }
       .cell {
         height: 100%;
         width: 22vw;
@@ -390,7 +394,7 @@ body {
   right: 10vw;
   bottom: 0;
   width: 80vw;
-  padding: 60px;
+  padding: 80px 60px 60px;
   background: #ffffff;
   .thead {
     position: relative;
@@ -412,7 +416,7 @@ body {
   .tbody {
     position: relative;
     .swiper-wrapper {
-      padding: 0 0 60px;
+      padding: 0 0 80px;
       .swiper-slide {
         padding: 100px 0 0 0;
         .cell {
@@ -420,6 +424,10 @@ body {
           background: #F5F8FA;
           border-radius: 30px;
           padding: 30px 30px 60px;
+          &:hover {
+            transition: all .3s ease;
+            transform: translate(0, -10px);
+          }
           .cover {
             position: absolute;
             right: 50px;
@@ -497,6 +505,15 @@ body {
   }
   .tbody {
     margin: 0 -10vw 0 0;
+    .swiper-wrapper {
+      padding: 20px 0;
+    }
+    .swiper-slide {
+      &:hover {
+        transition: all .3s ease;
+        transform: scale(0.95);
+      }
+    }
     .cell {
       position: relative;
       padding: 50px;
@@ -568,7 +585,12 @@ body {
       display: flex;
       -webkit-justify-content: space-between;
       justify-content: space-between;
+      padding: 10px 0;
       .item {
+        &:hover {
+          transition: all .3s ease;
+          transform: translate(0, -10px);
+        }
         h3 {
           line-height: 40px;
           font-size: 30px;
@@ -591,6 +613,9 @@ body {
 }
 
 .home-page__admission {
+  position: relative;
+  margin: 10vw;
+  width: 80vw;
   .thead {
     position: relative;
     text-align: center;
@@ -617,11 +642,15 @@ body {
       display: flex;
       .item {
         flex: 1;
+        &:hover {
+          transition: all .3s ease;
+          transform: translate(0, -10px);
+        }
         .cell {
           height: 100%;
           width: 22vw;
-          margin:  0 100px;
-          padding: 50px 50px;
+          margin:  0 50px;
+          padding: 50px;
           background: #2B2B2B;
           border-radius: 100px;
           overflow: hidden;

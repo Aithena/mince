@@ -182,6 +182,10 @@ body {
 .home-page__luqu .list .item {
   flex: 1;
 }
+.home-page__luqu .list .item:hover {
+  transition: all 0.3s ease;
+  transform: translate(0, -10px);
+}
 .home-page__luqu .list .item .cell {
   height: 100%;
   width: 22vw;
@@ -329,7 +333,7 @@ body {
   right: 10vw;
   bottom: 0;
   width: 80vw;
-  padding: 60px;
+  padding: 80px 60px 60px;
   background: #ffffff;
 }
 .home-page__team .thead {
@@ -353,7 +357,7 @@ body {
   position: relative;
 }
 .home-page__team .tbody .swiper-wrapper {
-  padding: 0 0 60px;
+  padding: 0 0 80px;
 }
 .home-page__team .tbody .swiper-wrapper .swiper-slide {
   padding: 100px 0 0 0;
@@ -363,6 +367,10 @@ body {
   background: #F5F8FA;
   border-radius: 30px;
   padding: 30px 30px 60px;
+}
+.home-page__team .tbody .swiper-wrapper .swiper-slide .cell:hover {
+  transition: all 0.3s ease;
+  transform: translate(0, -10px);
 }
 .home-page__team .tbody .swiper-wrapper .swiper-slide .cell .cover {
   position: absolute;
@@ -432,6 +440,13 @@ body {
 }
 .home-page__huaying .tbody {
   margin: 0 -10vw 0 0;
+}
+.home-page__huaying .tbody .swiper-wrapper {
+  padding: 20px 0;
+}
+.home-page__huaying .tbody .swiper-slide:hover {
+  transition: all 0.3s ease;
+  transform: scale(0.95);
 }
 .home-page__huaying .tbody .cell {
   position: relative;
@@ -503,6 +518,11 @@ body {
   display: flex;
   -webkit-justify-content: space-between;
   justify-content: space-between;
+  padding: 10px 0;
+}
+.home-page__contact .tbody .address .item:hover {
+  transition: all 0.3s ease;
+  transform: translate(0, -10px);
 }
 .home-page__contact .tbody .address .item h3 {
   line-height: 40px;
@@ -519,6 +539,11 @@ body {
 .home-page__contact .tbody .address .item dd {
   line-height: 20px;
   margin: 0 0 10px;
+}
+.home-page__admission {
+  position: relative;
+  margin: 10vw;
+  width: 80vw;
 }
 .home-page__admission .thead {
   position: relative;
@@ -547,11 +572,15 @@ body {
 .home-page__admission .tbody .list .item {
   flex: 1;
 }
+.home-page__admission .tbody .list .item:hover {
+  transition: all 0.3s ease;
+  transform: translate(0, -10px);
+}
 .home-page__admission .tbody .list .item .cell {
   height: 100%;
   width: 22vw;
-  margin: 0 100px;
-  padding: 50px 50px;
+  margin: 0 50px;
+  padding: 50px;
   background: #2B2B2B;
   border-radius: 100px;
   overflow: hidden;
